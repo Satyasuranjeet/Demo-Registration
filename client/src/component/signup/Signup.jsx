@@ -23,7 +23,7 @@ const Signup = () => {
 
         // Simulate server response delay
        
-        const response = await fetch('http://localhost:8080/push-data', {
+        const response = await fetch('https://registration-h8n9.onrender.com/push-data', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
