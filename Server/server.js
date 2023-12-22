@@ -44,6 +44,28 @@ app.post('/push-data', async (req, res) => {
   } 
 });
 
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body.text;
+
+  try {
+    await client.connect();
+    const database = client.db('Demo');
+    const collection = database.collection('Data');
+    
+    // Find the user with the given username and password
+    const user = await collection.findOne({ username, password });
+
+    if (user) {
+      res.status(200).json({ success: true, message: "Login successful" });
+    } else {
+      res.status(401).json({ success: false, message: "Invalid username or password" });
+    }
+  } catch (error) {
+    console.error("Error while logging in:", error);
+    res.status(500).json({ success: false });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

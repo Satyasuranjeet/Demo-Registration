@@ -36,3 +36,54 @@
     transform: rotate(360deg);
   }
 }
+
+
+.login-button,
+.signup-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: button-animation 1s ease-in-out infinite;
+}
+
+.login-button {
+  margin-right: 10px;
+}
+
+.signup-button {
+  margin-left: 10px;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes button-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.coin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
