@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 import express from 'express';
 import cors from 'cors';
 
-const uri = "mongodb+srv://satya:Satya12345@cluster0.8thgg4a.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://satya:satya@cluster0.8thgg4a.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
